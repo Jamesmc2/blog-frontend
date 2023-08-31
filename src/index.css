@@ -1,0 +1,12 @@
+#posts-index img {
+  width: 300px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  font-family: "Gill Sans";
+  background-image: url(./assets/country-quilt.webp) ;
+}
