@@ -4,6 +4,9 @@ import { PostNew } from "./PostNew";
 import { PostIndex } from "./PostIndex";
 import { Modal } from "./Modal";
 import { PostShow } from "./PostShow";
+import { Signup } from "./Signup";
+import { Login } from "./Login";
+import { LogoutLink } from "./LogoutLink";
 
 export function Content() {
   const [posts, setPosts] = useState([]);
@@ -30,6 +33,9 @@ export function Content() {
 
   return (
     <div className="container">
+      <LogoutLink />
+      <Signup />
+      <Login />
       <PostNew />
       <br />
 
