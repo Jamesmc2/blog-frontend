@@ -10,11 +10,11 @@ export function PostShow(props) {
   };
   return (
     <div>
-      <p>Current post id: {props.post.id}</p>
-      <p>Current post auther id: {props.post.user_id}</p>
-      <p>Current post Title: {props.post.title}</p>
-      <p>Current post Body: {props.post.body}</p>
-      <p>Current post Image URL: {props.post.image}</p>
+      <p>Post id: {props.post.id}</p>
+      <p>Post auther id: {props.post.user_id}</p>
+      <p>Post Title: {props.post.title}</p>
+      <p>Post Body: {props.post.body}</p>
+      <p>Post Image URL: {props.post.image}</p>
       <button onClick={handleDelete}>Delete</button>
       <form id="posts-edit" onSubmit={handleSubmit}>
         <h1>Edit post</h1>

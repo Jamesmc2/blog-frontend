@@ -4,6 +4,7 @@ export function PostNew(props) {
     const params = new FormData(event.target);
     props.onCreatePost(params);
     event.target.reset();
+    window.location.href = "/";
   };
   return (
     <form id="posts-new" onSubmit={handleSubmit}>

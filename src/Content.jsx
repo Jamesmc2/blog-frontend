@@ -68,12 +68,12 @@ export function Content() {
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/" element={<PostIndex posts={posts} onShowPost={handleShowPost} />} />
+        <Route path="/posts/new" element={<PostNew onCreatePost={handleCreatePost} />} />
       </Routes>
 
-      <PostNew onCreatePost={handleCreatePost} />
       <br />
 
-      <PostIndex posts={posts} onShowPost={handleShowPost} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
         <PostShow post={currentPost} onUpdatePost={handleUpdatePost} onDeletePost={handleDeletePost} />
       </Modal>

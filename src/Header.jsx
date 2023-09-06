@@ -22,6 +22,11 @@ export function Header() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
+              <Link to="/" className="nav-link">
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link to="/signup" className="nav-link">
                 Sign up
               </Link>
@@ -37,6 +42,11 @@ export function Header() {
             <li className="nav-item">
               <Link to="/about" className="nav-link">
                 About
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/posts/new" className="nav-link">
+                New post
               </Link>
             </li>
             <li className="nav-item dropdown">
