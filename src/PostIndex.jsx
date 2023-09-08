@@ -12,6 +12,7 @@ export function PostIndex(props) {
           <img src={post.image} alt="" />
           <br />
           <button onClick={() => props.onShowPost(post)}>More info</button>
+          <a href={`/posts/${post.id}`}>Go to page</a>
         </div>
       ))}
     </div>

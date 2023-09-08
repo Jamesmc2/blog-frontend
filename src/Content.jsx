@@ -8,6 +8,7 @@ import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { Routes, Route } from "react-router-dom";
 import { About } from "./About";
+import { PostShowPage } from "./PostShowPage";
 
 export function Content() {
   const [posts, setPosts] = useState([]);
@@ -70,6 +71,7 @@ export function Content() {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<PostIndex posts={posts} onShowPost={handleShowPost} />} />
         <Route path="/posts/new" element={<PostNew onCreatePost={handleCreatePost} />} />
+        <Route path="/posts/:id" element={<PostShowPage />} />
       </Routes>
 
       <br />

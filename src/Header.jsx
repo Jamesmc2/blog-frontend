@@ -6,7 +6,7 @@ export function Header() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          Navbar
+          Blog Website
         </a>
         <button
           className="navbar-toggler"
@@ -79,11 +79,6 @@ export function Header() {
                   </a>
                 </li>
               </ul>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" aria-disabled="true">
-                Disabled
-              </a>
             </li>
           </ul>
           <form className="d-flex" role="search">
