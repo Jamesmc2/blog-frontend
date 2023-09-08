@@ -1,10 +1,20 @@
 import { Link } from "react-router-dom";
 import { LogoutLink } from "./LogoutLink";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export function Header() {
   let authenticationLinks;
+  const [user, setUser] = useState({});
+  let welcomeMessage;
+
+  const getUser = () => {
+    axios.get("http://localhost:3000/users/current.json").then((response) => setUser(response.data));
+  };
+  useEffect(getUser, []);
 
   if (localStorage.jwt === undefined) {
+    welcomeMessage = "Blog Website";
     authenticationLinks = (
       <>
         <li className="nav-item">
@@ -20,6 +30,7 @@ export function Header() {
       </>
     );
   } else {
+    welcomeMessage = `Welcome ${user.name}`;
     authenticationLinks = (
       <>
         <li className="nav-item">
@@ -32,7 +43,7 @@ export function Header() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          Blog Website
+          {welcomeMessage}
         </a>
         <button
           className="navbar-toggler"
